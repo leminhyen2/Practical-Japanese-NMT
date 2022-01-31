@@ -46,6 +46,16 @@ For training a Japanese to English model, you need to prepare a list of bilingua
 
 [harikc456 Subtitle Dataset](https://github.com/harikc456/anime-subs-mapping "harikc456 Subtitle Dataset"): contained around 500k subtitles lines from anime. Data is in the form of CSV. 
 
+[Otaku Benchmark](https://github.com/leminhyen2/Otaku-Benchmark "Otaku Benchmark"): my own repo to evaluate NMT quality and soon other related domains about manga, video game, anime, etc
+
+- ### Interesting NMT techniques:
+
+**Backtranslation**: use your own model or some other models to backtranslate monolingual data from the target language into the source language. For example, you have a lot of Bible lines in English, you use your EN-JA model to translate them into Japanese and add those into the training data. Although very effective, there is a limit to to the amount of backtranslated data before the model degrades. Standard ratio is 1:1 for authentic data and backtranslated data
+
+**Tagged Backtranslation**: a very effective variant of backtranslation. All you need to do is to add a custom token like "{BT}" before the source side data (Japanese if JA-EN). For example, {BT} こんにちは. According to research, adding tag before backtranslation data can help signal the model that the data is backtranslated so it will only extract the good part from the data.
+
+**Fine-tuning**: train a big general model with let's say 10 million lines of data from Wikipedia. Next, use that model to continue training/fine-tuning with a smaller but specific dataset of your choice (ie. Subtitles). 
+
 - ### **Common Data Preprocessing Steps:**
 
 The first one is **deduplication**. Remove training data with the same content, keep the unique ones.

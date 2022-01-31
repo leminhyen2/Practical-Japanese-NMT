@@ -1,6 +1,7 @@
 In this repo, I will share what I know about training a Japanese-English translation model.
 
-**How to effectively search for research papers:**
+### **How to effectively search for research papers:**
+
 The field of applying deep learning technologies to machine translation is known as **Neural Machine Translation** or **NMT**. This is important to know because if you have a vague idea of what you want to do, you can **search Google** in this pattern: "**Your idea + NMT**". For example, if you are interested in translation that keep context in mind, you can search for "contextual NMT". 
 
 **An overview of modern NMT:**
@@ -57,3 +58,19 @@ The **most common form** of NMT token is **subword**. For example, the word "doi
 The most popular implementation of subword tokenization is [sentencepiece](https://github.com/google/sentencepiece "sentencepiece") (SPM) and [Byte-Pair Encoding](https://github.com/rsennrich/subword-nmt "Byte-Pair Encoding") (BPE). 
 
 Either you will have to manually install and use the above packages or use the bundled implementation of your framework (HuggingFace, Pytorch, etc).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

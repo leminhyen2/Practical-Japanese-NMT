@@ -46,6 +46,10 @@ For training a Japanese to English model, you need to prepare a list of bilingua
 
 [harikc456 Subtitle Dataset](https://github.com/harikc456/anime-subs-mapping "harikc456 Subtitle Dataset"): contained around 500k subtitles lines from anime. Data is in the form of CSV. 
 
+NMT Benchmark Resources:
+
+[WMT Testset](https://data.statmt.org/wmt20/translation-task/ "WMT Testset"): WMT is a conference/competition of various domains (news, medical, etc) and language-pairs. By changing the year in the URL from wmt20 to wmt19 for example you can get data from previous years. This is helpful if you want to test your data and method against the published papers.
+
 [Otaku Benchmark](https://github.com/leminhyen2/Otaku-Benchmark "Otaku Benchmark"): my own repo to evaluate NMT quality and soon other related domains about manga, video game, anime, etc
 
 - ### Interesting NMT techniques:
